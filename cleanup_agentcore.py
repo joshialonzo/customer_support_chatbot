@@ -17,9 +17,13 @@ testing stack — CloudFormation cannot delete a non-empty bucket):
 
 import argparse
 import json
+import os
 import sys
 import time
 from pathlib import Path
+
+# Use this project's AWS profile unless the shell already picked one.
+os.environ.setdefault("AWS_PROFILE", "future_aws_agent_engineer")
 
 import boto3
 from botocore.exceptions import ClientError

@@ -23,8 +23,12 @@ underscores. A dash in the target name breaks Nova tool calling with
 
 import argparse
 import json
+import os
 import sys
 import time
+
+# Use this project's AWS profile unless the shell already picked one.
+os.environ.setdefault("AWS_PROFILE", "future_aws_agent_engineer")
 
 import boto3
 

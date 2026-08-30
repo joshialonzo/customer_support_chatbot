@@ -15,10 +15,14 @@ Evaluations expects:
 
 import argparse
 import json
+import os
 import sys
 import uuid
 from pathlib import Path
 from typing import Any, Dict
+
+# Use this project's AWS profile unless the shell already picked one.
+os.environ.setdefault("AWS_PROFILE", "future_aws_agent_engineer")
 
 import boto3
 from botocore.config import Config
