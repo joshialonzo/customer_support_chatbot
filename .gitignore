@@ -6,3 +6,4 @@ scripts/*
 venv/
 agentcore_config.json
 output_eval_dataset.jsonl
+.vscode/
